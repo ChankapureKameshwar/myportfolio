@@ -2187,6 +2187,9 @@ body.dark-theme .footer__link:hover, body.dark-theme .footer__download-link:hove
   }
 }
 
-
+.project_content{
+  list-style-type: disc;
+  text-align:left;
+}
 
 
