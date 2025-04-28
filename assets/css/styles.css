@@ -709,14 +709,15 @@ body.dark-theme .word {
 }
 
 body.dark-theme .home__name {
-  background-image: linear-gradient(
+/*   background-image: linear-gradient(
     45deg,
     #00c2ff,
     #33ff8c,
     #ffc640,
     #e54cff,
     #00c2ff
-  );
+  ); */
+  color: white;
   background-size: 200% 200%;
 }
 
@@ -2266,6 +2267,53 @@ body.dark-theme .footer__link:hover, body.dark-theme .footer__download-link:hove
   background: none;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
+}
+/* In [data-theme="dark"] (around line 1100 or add) */
+[data-theme="dark"] {
+  --body-color: hsl(0, 0%, 12%);
+  --container-color: hsl(0, 0%, 20%);
+  --black-color: hsl(0, 0%, 0%);
+  --white-color: hsl(0, 0%, 100%);
+}
+
+/* Contact Section Backgrounds */
+[data-theme="dark"] .contact__data {
+  background-color: var(--container-color) !important; /* Dark background */
+  color: var(--white-color) !important;
+}
+
+[data-theme="dark"] .contact__mail {
+  background-color: var(--container-color) !important; /* Dark background */
+  color: var(--white-color) !important;
+}
+
+/* Preserve Contact Descriptions and Spans */
+[data-theme="dark"] .contact__description-1,
+[data-theme="dark"] .contact__description-2 {
+  color: var(--black-color) !important;
+  background-color: var(--white-color) !important;
+  padding: 0.25rem 0.5rem;
+  display: inline-block;
+}
+
+[data-theme="dark"] .contact__data span,
+[data-theme="dark"] .contact__mail span {
+  color: var(--black-color) !important;
+  background-color: var(--white-color) !important;
+  padding: 0.25rem 0.5rem;
+  display: inline-block;
+}
+
+/* Fallback for system dark mode */
+@media (prefers-color-scheme: dark) {
+  .contact__data {
+    background-color: var(--container-color) !important;
+    color: var(--white-color) !important;
+  }
+  .contact__mail {
+    background-color: var(--container-color) !important;
+    color: var(--white-color) !important;
+  }
 }
 
 
