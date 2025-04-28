@@ -2192,4 +2192,80 @@ body.dark-theme .footer__link:hover, body.dark-theme .footer__download-link:hove
   text-align:left;
 }
 
+/* In :root (lines 6-26) */
+:root {
+  --body-color: hsl(0, 3%, 75%); /* Verify this is set */
+}
+
+/* Home Section (around line 361, if needed) */
+.home__container {
+  background-color: var(--body-color); /* Add if white background persists */
+}
+
+/* About Section (around line 496) */
+.about {
+  background-color: var(--body-color); /* Match body color */
+}
+
+/* Projects Section (around line 696) */
+.project__card {
+  background-color: var(--body-color); /* Match body color */
+}
+
+/* Coding Profiles Section (around line 808) */
+.coding-profiles {
+  background-color: var(--body-color); /* Match body color */
+}
+
+/* Coding Profiles Cards (around line 822) */
+.coding__card {
+  background-color: var(--body-color); /* Match body color */
+}
+
+/* Contact Section (around line 898) */
+.contact__data {
+  background-color: var(--body-color); /* Match body color */
+}
+
+/* In :root (lines 6-26) */
+:root {
+  --white-color: hsl(0, 0%, 100%); /* Verify or add white color */
+}
+
+/* Projects Section (around line 696) */
+.project__card {
+  background-color: var(--white-color); /* White background like project-certificates */
+}
+
+/* Coding Profiles Cards (around line 822) */
+.coding__card {
+  background-color: var(--white-color); /* White background like project-certificates */
+}
+
+/* Contact Section (around line 898) */
+.contact__data {
+  background-color: var(--white-color); /* White background like project-certificates */
+}
+
+/* In :root (lines 6-26) */
+:root {
+  --black-color: hsl(0, 0%, 0%); /* Verify or add black color */
+}
+
+/* Home Name (around line 380) */
+.home__name {
+  color: var(--black-color); /* Solid black color */
+  background: none; /* Remove any gradient */
+  -webkit-background-clip: initial; /* Reset clip */
+  -webkit-text-fill-color: initial; /* Reset text fill */
+}
+
+/* Light Mode Override (if present, e.g., around line 1100) */
+[data-theme="light"] .home__name {
+  color: var(--black-color); /* Ensure black in light mode */
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+}
+
 
