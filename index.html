@@ -565,7 +565,33 @@
         </script>
 
         <!-- MAIN JS -->
+        
         <script src="assets/js/main.js"></script>
+        <script src='https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js'></script>
+<script>
+  window.addEventListener("DOMContentLoaded", function() {
+    window.AgentInitializer.init({
+      agentRenderURL: "https://agent.jotform.com/01968a2cfc0b7e8385a301a04e8c8942e6d0",
+      rootId: "JotformAgent-01968a2cfc0b7e8385a301a04e8c8942e6d0",
+      formID: "01968a2cfc0b7e8385a301a04e8c8942e6d0",
+      queryParams: ["skipWelcome=1", "maximizable=1"],
+      domain: "https://www.jotform.com",
+      isDraggable: false,
+      background: "linear-gradient(180deg, #f5a623 0%, #f5a623 100%)",
+      buttonBackgroundColor: "#ffffff",
+      buttonIconColor: "#000000",
+      variant: false,
+      customizations: {
+        "greeting": "Yes",
+        "greetingMessage": "Hi! Kamesh's Assistant How can I assist you?",
+        "pulse": "Yes",
+        "position": "right",
+        "autoOpenChatIn": "0"
+      },
+      isVoice: false,
+    });
+  });
+</script>
     </body>
 
 </html>
